@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free help for refugees form</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- main styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page__wrapper container-sm mb-5">
+      <header class="header d-flex justify-content-center mt-5">
+        <div class="header__wrapper w-75 mb-5">
+          <h1 class="text-center mt-3" id="title">
+            Free help for refugees form
+          </h1>
+          <p class="text-center fs-3 text" id="description">
+            If you find yourself in a difficult situation, please fill out the
+            form below
+          </p>
+        </div>
+      </header>
+      <div class="form__wrapper d-flex justify-content-center">
+        <form class="form w-75" id="survey-form" action="#">
+          <div class="form-group mb-4">
+            <label for="name" class="form-label fs-5 text" id="name-label"
+              >Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group mb-4">
+            <label for="number" class="form-label fs-5 text" id="number-label"
+              >Age</label
+            >
+            <span class="hint fs-5 text">(optional)</span>
+            <input
+              type="number"
+              class="form-control"
+              id="number"
+              name="age"
+              min="10"
+              max="99"
+              placeholder="Age"
+            />
+          </div>
+          <div class="form-group mb-4">
+            <label for="email" class="form-label fs-5 text" id="email-label"
+              >Email</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group mb-4">
+            <p class="fs-5 text">Do you have children?</p>
+            <select
+              class="form-control form-select"
+              id="children"
+              name="children"
+            >
+              <option selected disabled value>Select from the list</option>
+              <option value="yes">Yes, I have</option>
+              <option value="no">No</option>
+              <option value="no-ans">I prefer not to answer</option>
+            </select>
+          </div>
+          <div class="form-group mb-4">
+            <p class="fs-5 text">Specify your gender</p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item rounded mb-2">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    class="input-radio form-check-input me-1"
+                    name="gender"
+                    value="male"
+                  />
+                  Male
+                </label>
+              </li>
+              <li class="list-group-item rounded mb-2">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    class="input-radio form-check-input me-1"
+                    name="gender"
+                    value="female"
+                  />
+                  Female
+                </label>
+              </li>
+              <li class="list-group-item rounded mb-2">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    class="input-radio form-check-input me-1"
+                    name="gender"
+                    value="other"
+                    checked
+                  />
+                  Other
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="form-group mb-4">
+            <p class="fs-5 text">What help do you need?</p>
+            <select class="form-control form-select" id="dropdown" name="help">
+              <option selected disabled value>Select from the list</option>
+              <option value="child">
+                Help for families with a child or teen
+              </option>
+              <option value="food">Free food Programs</option>
+              <option value="relocation">Help with relocation</option>
+              <option value="legal-doc">Help with legal documents</option>
+            </select>
+          </div>
+          <div class="form-group mb-4">
+            <p class="fs-5 text">Which documents do you have at the moment?</p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item rounded mb-2">
+                <label class="form-check-label">
+                  <input
+                    type="checkbox"
+                    class="input-checkbox form-check-input me-1"
+                    name="documents"
+                    value="foreign"
+                  />
+                  Biometric / Non-Biometric passport (foreign)
+                </label>
+              </li>
+              <li class="list-group-item rounded mb-2">
+                <label class="form-check-label">
+                  <input
+                    type="checkbox"
+                    class="input-checkbox form-check-input me-1"
+                    name="documents"
+                    value="domestic"
+                  />
+                  Passport / ID-CARD (domestic)
+                </label>
+              </li>
+              <li class="list-group-item rounded mb-2">
+                <label class="form-check-label">
+                  <input
+                    type="checkbox"
+                    class="input-checkbox form-check-input me-1"
+                    name="documents"
+                    value="drivers-license"
+                  />
+                  Driver's license
+                </label>
+              </li>
+              <li class="list-group-item rounded mb-2">
+                <label class="form-check-label">
+                  <input
+                    type="checkbox"
+                    class="input-checkbox form-check-input me-1"
+                    name="documents"
+                    value="birth-certificate"
+                  />
+                  Birth certificate
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="form-group mb-4">
+            <p class="fs-5 text">
+              Do You Want to Tell Us Anything Else About You?
+            </p>
+            <textarea
+              class="input-textarea form-control"
+              name="comments"
+              id="comments"
+              rows="6"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+          <div class="form-group d-grid mb-4">
+            <button type="submit" class="btn btn-primary btn-lg" id="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
